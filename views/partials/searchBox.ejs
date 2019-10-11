@@ -1,0 +1,29 @@
+    <div class="jumbotron">
+        <h1 class="display-4">Search</h1>
+        <hr class="my-4">
+
+        <form ref='query' id='query' action='/search' method='post'>
+            <div class="form-group">
+                <label for="zipcode">Zip Code</label>
+                <input type="number" class="form-control" name="query[zip]" placeholder="Zip code" />
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" name="query[city]" placeholder="City" />
+            </div>
+
+
+            <div class="form-group">
+                <label for="state">State</label>
+                <select class="form-control" name="query[state]">
+                    <option label=" "></option>
+                    <% for(let i=0; i<stateCodes.length; i++){ %>
+                    <option value="<%=stateCodes[i]%>"><%=stateCodes[i]%></option>
+                    <% } %>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>

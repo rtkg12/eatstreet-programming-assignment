@@ -1,0 +1,15 @@
+<% include partials/header %>
+<% include partials/navbar %>
+
+<% if(!isEmpty){%>
+
+<h3>Distance between <%= body["zip_code1"] %> and <%= body["zip_code2"] %> is: <%= body["distance"] %> <%= unit %></h3>
+
+
+<% include partials/results %>
+
+<% } else {  %>
+<h3>No results returned</h3>
+<% } %>
+
+<% include partials/footer %>

@@ -1,0 +1,39 @@
+<% include partials/header %>
+
+<div class="container">
+    <% include partials/navbar %>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Match Close</h1>
+        <hr class="my-4">
+
+        <form ref='query' id='query' action='/match' method='post'>
+            <div class="form-group">
+                <label for="zipcode1">Zip Code 1</label>
+                <input type="number" class="form-control" name="query[zip1]" placeholder="Zip code 1" />
+            </div>
+
+            <div class="form-group">
+                <label for="zipcode2">Zip Code 2</label>
+                <input type="number" class="form-control" name="query[zip2]" placeholder="Zip code 2" />
+            </div>
+
+            <div class="form-group">
+                <label for="distance">Distance</label>
+                <input type="number" class="form-control" name="query[distance]" placeholder="Distance" />
+            </div>
+
+            <div class="form-group">
+                <label for="unit">Unit</label>
+                <select class="form-control" name="query[unit]">
+                    <option value="km">km</option>
+                    <option value="mile">mile</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+</div>
+
+<% include partials/footer %>

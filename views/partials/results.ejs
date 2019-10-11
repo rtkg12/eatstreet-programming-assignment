@@ -1,0 +1,40 @@
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Zip Code</th>
+            <th scope="col">City</th>
+            <th scope="col">Mixed City</th>
+            <th scope="col">State Code</th>
+            <th scope="col">State FIPS</th>
+            <th scope="col">County</th>
+            <th scope="col">Mixed County</th>
+            <th scope="col">County FIPS</th>
+            <th scope="col">Latitude</th>
+            <th scope="col">Longitude</th>
+            <th scope="col">GMT</th>
+            <th scope="col">DST</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% let count = 1; %>
+        <% for(let i=0; i<searchResults.length;i++){ %>
+        <tr>
+            <th scope="row"><%=count%></th>
+            <td><%= searchResults[i].zipCode %></td>
+            <td><%= searchResults[i].city %></td>
+            <td><%= searchResults[i].mixedCity %></td>
+            <td><%= searchResults[i].stateCode %></td>
+            <td><%= searchResults[i].stateFIPS %></td>
+            <td><%= searchResults[i].county %></td>
+            <td><%= searchResults[i].mixedCounty %></td>
+            <td><%= searchResults[i].countyFIPS %></td>
+            <td><%= searchResults[i].latitude %></td>
+            <td><%= searchResults[i].longitude %></td>
+            <td><%= searchResults[i].gmt %></td>
+            <td><%= searchResults[i].dst %></td>
+        </tr>
+        <% count++; %>
+        <% } %>
+    </tbody>
+</table>

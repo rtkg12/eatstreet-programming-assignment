@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+
+
+<div class="container">
+    <% include partials/navbar %>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Upload file</h1>
+        <hr class="my-4">
+        <form ref='fileUpload' id='fileUpload' action='/upload' method='post' encType="multipart/form-data">
+
+            <div class="form-group">
+                <label for="file">Select File</label>
+                <input type="file" class="form-control-file" name="data" accept=".csv" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+</div>
+
+<% include partials/footer %>
