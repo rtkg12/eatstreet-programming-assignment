@@ -17,7 +17,7 @@
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-fileupload": "^1.1.6-alpha.5",
     "fast-csv": "^3.4.0",
     "mongodb": "^3.3.2",
